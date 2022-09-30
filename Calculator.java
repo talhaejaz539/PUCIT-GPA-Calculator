@@ -22,7 +22,7 @@ public class Calculator {
 			num[i] = Integer.parseInt(x);
 
 			String y = JOptionPane.showInputDialog("Subject " + j + " Credit Hrs: ");
-			credithrs[i] = Double.parseDouble(x);
+			credithrs[i] = Double.parseDouble(y);
 			totalCreditHrs += credithrs[i];
 
 			if(num[i] >= 85) 
