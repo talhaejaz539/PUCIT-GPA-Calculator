@@ -6,6 +6,20 @@ public class Calculator {
 
 	public static void main(String[] args) {
 
+		String semesters = JOptionPane.showInputDialog("Enter Total Semesters: ");
+		int sem = Integer.parseInt(semesters);
+		double totalsem = 0.0;
+
+		for(int i=0; i<sem - 1; i++) {
+		
+			int j = i;	j++;
+			double d[] = new double[sem];
+			String x = JOptionPane.showInputDialog("Semester " + j + " SGPA: ");
+			d[i] = Double.parseDouble(x);
+			totalsem += d[i];
+
+		}
+
 		String sizeS = JOptionPane.showInputDialog("Enter Total Subjects: ");
 		int size = Integer.parseInt(sizeS);
 
@@ -50,6 +64,11 @@ public class Calculator {
 
 		double sgpa = total / totalCreditHrs;
 		JOptionPane.showMessageDialog(null, "SGPA = " + sgpa);
+
+		double tcgpa = totalsem + sgpa;
+		double cgpa = tcgpa / sem;
+		JOptionPane.showMessageDialog(null, "CGPA = " + cgpa);
+
 	
 	}
 
